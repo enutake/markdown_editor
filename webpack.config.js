@@ -18,5 +18,14 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         publicPath: 'dist/',
+    },
+    devServer: {
+        hot: true,
+        open: true,
+        static: {
+            directory: path.join(__dirname),
+            watch: true,
+        },
+        historyApiFallback: true,
     }
 }
